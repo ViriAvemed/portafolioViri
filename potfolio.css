@@ -1,0 +1,373 @@
+/*ANIMATION PRELOADER*/
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    /*overflow: hidden;*/
+    font-family: "Roboto Light", serif;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.loading {
+    margin: 10% auto;
+    border-top: 6px solid white;
+    width: 95vw;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+}
+
+div .loading .spin .class{
+    width: 100vw;
+    background: red;
+}
+
+
+.spin {
+    -webkit-animation: spin 1s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 1s infinite linear;
+    width: 94vw;
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        transform: rotate(3670deg);
+    }
+}
+
+@-o-keyframes spin {
+    from {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.class {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+}
+
+.up {
+    background-color: black;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+.down {
+    background-color: black;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+}
+
+.left-text-con,
+.right-text-con {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    top: 35%;
+}
+
+.left-text-con {
+    left: -50%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.right-text-con {
+    right: -50%;
+}
+
+.text {
+    color: #34495e;
+    font-size: 4em;
+    margin: 0 auto;
+}
+
+@media (max-height: 300px) {
+    .text {
+        font-size: 3em;
+    }
+    .left-text-con,
+    .right-text-con {
+        top: 20%;
+    }
+}
+
+.anchor-user {
+    font-size: 3em;
+    position: relative;
+    bottom: 0;
+    right: 20px;
+    color: #000;
+}
+
+.anchor-user:hover {
+    color: black;
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease;
+}
+
+
+/*ANIMATION CHANGE COLOR*/
+
+body.dark-mode {
+    background-color:white;
+    color:  #111;
+    width: 100vw;
+    height: 100vh;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode button{
+    background-color: #111;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #111;
+    color: white;
+}
+
+body.light-mode a {
+    color: white;
+}
+body.light-mode button {
+    background-color: white;
+    color: #111;
+}
+
+.change-color-icon{
+    position: relative;
+    top: 70px;
+    z-index: 1;
+    left: 33px;
+}
+
+/*MAVBAR*/
+
+
+
+/*body {*/
+/*    position: relative;*/
+/*}*/
+body .wrapper2 {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    margin-top: -50px;
+    width: 50%;
+    margin-left: -25%;
+    text-align: center;
+    z-index: -1;
+}
+
+h1 {
+    color: #30C4C9;
+}
+body .wrapper2 span {
+    z-index: 1;
+    position: absolute;
+    top: 37px;
+    left: 33px;
+    width: 35px;
+    height: 4px;
+    background: gray;
+    cursor: pointer;
+}
+body .wrapper2 span:before, body .wrapper2 span:after {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    height: 4px;
+    width: 35px;
+    background: grey;
+}
+body .wrapper2 span:before {
+    top: -8px;
+}
+body .wrapper2 span:after {
+    bottom: -8px;
+}
+body .wrapper2 .overlay {
+    position: absolute;
+    bottom: -99%;
+    height: 100%;
+    background: black;
+    left: 0;
+    width: 100vw;
+    transition: all 0.5s ease;
+}
+body .wrapper2 .overlay.anim {
+    left: 0;
+    bottom: 0;
+    animation: menu-anim 1.5s 1 ease-out normal;
+    width: 25%;
+    transition: all 0.5s ease;
+}
+body .wrapper2 .overlay.anim.reverse-anim {
+    left: 0;
+    bottom: 0;
+    animation: menu-anim 1.5s 1 ease-out reverse;
+    width: 25%;
+    transition: all 0.5s ease;
+}
+body .wrapper2 .overlay ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    padding-left: 0;
+    margin-left: -10px;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+body .wrapper2 .overlay ul li {
+    margin: 10px 0;
+}
+body .wrapper2 .overlay ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    overflow: hidden;
+}
+body .wrapper2 .overlay ul li a:after {
+    display: block;
+    border-radius: 2px;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    height: 5px;
+    background: #ffffff;
+    transform: translateX(-101%);
+}
+body .wrapper2 .overlay ul li a:hover {
+    text-decoration: none;
+}
+body .wrapper2 .overlay ul li a:hover:after {
+    animation: border-anim 0.5s 1 ease normal;
+    transform: translateX(0);
+}
+@-webkit-keyframes border-anim {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes menu-anim {
+    0% {
+        left: 0;
+        bottom: -99%;
+        width: 100%;
+    }
+    33% {
+        left: -99.5%;
+        bottom: -99%;
+        width: 100%;
+    }
+    66% {
+        left: -99.5%;
+        bottom: 0;
+        width: 100%;
+    }
+    100% {
+        bottom: 0;
+        left: 0;
+        width: 20%;
+    }
+}
+
+
+
+.retract{
+    width: 23%;
+    left: 480px;
+    position: relative;
+    top: 59px;
+
+}
